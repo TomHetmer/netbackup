@@ -3,7 +3,7 @@ This is a very simple script that can watch dropped files from network devices o
 
 
 # Ubiquiti example
-* Create the netbackup user and allow SSH password-based logins (it's very hard to use keys on UBNT), you can use ChrootDirectory to ./archive and ForceCommand internal-sftp. Have inotify-tools installed.
+* Create the netbackup user and allow SSH password-based logins (it's very hard to use keys on UBNT), you can use ChrootDirectory to ./archive (and ForceCommand internal-sftp or rssh). Have inotify-tools installed.
 * Create ./repo and ./archive, connect ./repo to your git repository (things like GitLab have deploy keys for this)
 * Setup a systemd service (can be global) with a custom script
 * Set up your device to push configs to ./archive
