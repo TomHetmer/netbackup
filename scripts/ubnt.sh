@@ -11,7 +11,7 @@ inotifywait -m $ARCHIVE -e create -e moved_to |
             echo "Valid ubnt file, moving it to repo and pushing"
             mv "$ARCHIVE/$file" "$REPO/${BASH_REMATCH[1]}"
             git add .
-            git commit -m "Auto-commit by netbackup"
+            git commit -m "${BASH_REMATCH[1]} by netbackup"
             git push
         else
             echo "Invalid file"
