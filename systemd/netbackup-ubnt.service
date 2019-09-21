@@ -1,0 +1,14 @@
+[Unit]
+Description=Netbackup for ubnt
+After=network.target
+
+[Service]
+User=netbackup
+Group=netbackup
+WorkingDirectory=/home/netbackup/repo
+Type=simple
+
+ExecStart=/opt/netbackup/ubnt.sh
+
+[Install]
+WantedBy=multi-user.target
